@@ -1,3 +1,3 @@
-# Zenn CLI
+# 🚀 SHOTA Tech Blog
 
-* [📘 How to use](https://zenn.dev/zenn/articles/zenn-cli-guide)
+>> Now under construction...
