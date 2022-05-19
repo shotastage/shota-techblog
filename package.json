@@ -1,0 +1,23 @@
+{
+  "name": "shota-techblog",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shotastage/shota-techblog.git"
+  },
+  "keywords": [],
+  "author": "Shota Shimazu <hornet.live.mf@gmail.com> (https://shotach.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/shotastage/shota-techblog/issues"
+  },
+  "homepage": "https://github.com/shotastage/shota-techblog#readme",
+  "dependencies": {
+    "zenn-cli": "^0.1.110"
+  }
+}
