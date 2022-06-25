@@ -36,4 +36,4 @@ $ brew install swiftwasm/tap/carton
 
 ## Cartonを使ってSwiftのWasmプロジェクトをビルドする
 
-次に、プロジェクトの作成を行います。
+次に、プロジェクトの作成を行います。 `carton init` コマンドでプロジェクトを作成することができます。
