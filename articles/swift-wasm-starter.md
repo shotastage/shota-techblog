@@ -27,6 +27,13 @@ https://github.com/swiftwasm/carton
 Swiftのコンパイラは標準ではWebAssembly向けのバイトコードにコンパイル・ビルドする機能を持っていません。しかしSwiftがバックエンドとして用いているコンパイラ基盤であるLLVMはWASM向けコンパイルが可能です。しかし、通常のSwfitプロジェクトをビルドするように`swift build`を実行すればいいと言うわけではありません。
 そこで、Cartonはこの*Swift Build*と同じ役割をWebAssembly向けのプロジェクトで果たしてくれています。
 
+インストールは下記のコマンドでHomebrew経由で行うことができます。
+
 ```shell
 $ brew install swiftwasm/tap/carton
 ```
+
+
+## Cartonを使ってSwiftのWasmプロジェクトをビルドする
+
+次に、プロジェクトの作成を行います。
