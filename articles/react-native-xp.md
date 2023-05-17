@@ -78,15 +78,15 @@ Chakraは、もともとInternet ExplorerでJavaScriptの処理を担当して�
 
 ## Windowsでの環境構築
 
-今回、検証を実施した環境は以下のような環境。
+Windowsで必要な環境はWindows 10もしくはWindows 11とVisual Studio環境です。
+Visual StudioはCommunity版でも問題ありません。Visual Studio Codeとは異なりますので
 
 **実験環境**
 
+![](/images/rn-xp/win-spec.png)
+
 | 項目  | 環境  |
 |:----------|:----------|
-| OS | Windows 11 Pro (ARM) |
-| CPU | M2 Max (Parallels Virtual CPU Quad-Core) |
+| OS | System type	64-bit operating system, ARM-based processor |
+| CPU | M2 Max / Apple Silicon 3.20 GHz  (4 processors) |
 | RAM | 8GB (Parallels Virtual RAM) |
-
-
-
