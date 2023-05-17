@@ -31,10 +31,14 @@ React Native XPは更にデスクトップアプリにもこのメリットを�
 
 ### for macOSの実装
 
-React Native for macOSは基本的にiOS向けのReact Nativeに一部macOS向けの対応を追加したものです。
-iOSとmacOSは同じ系統のOSであり、類似したUIのAPIを持ちます。しかし、完全に同一なわけではなくiOSであればUIKit, macOSではCocoaと呼ばれるUIフレームワークを用います。
-当然、従来のiOSではReact NativeのViewをUIKitにマッピングしています。では、React Native XPのmacOSにおいてはどうでしょうか。
-これは、
+React Native for macOSは基本的に、iOS向けのReact Nativeに一部macOS対応を追加したものです。React NativeはOS標準のUIとReact NativeのViewのAPIをマッピングしています。iOSでは、このマッピングにはUIKitが使用されています。
+しかし、iOSとmacOSでは、使用するUIフレームワークが異なります。具体的には、iOSではUIKitが、macOSではCocoaが使用されます。
+一見、React Native for macOSがCocoaと連携しているように見えますが、実際にはMac Catalystというフレームワークを利用しています。Mac Catalystは、macOS標準のCocoaではなく、iOSのUIKitを用いてmacOSアプリケーションを開発するためのフレームワークです。
+しかし、このMac Catalystは、完全にiOSで動作するUIKitとは同一ではありません。一部にはmacOS向けの最適化が施されています。そのため、React Native for macOSでは、一部の最適化を無効化し、iOSとの外観を統一するなどの追加処理が行われています。
+
+### for Windowsの実装
+
+React Native for WindowsはmacOSとは対照的に非常に多くのマッピングが実装されています。macOSがiOSのモバイル向けの従来から存在するReact Nativeの資産を応用できたのに対して、WindowsはiOS, Androidいずれにおいても共通性がありません。
 
 ### JavaScriptランタイムの違い
 
@@ -66,7 +70,11 @@ Chakraは、もともとInternet ExplorerでJavaScriptの処理を担当して�
 
 ## プラットフォーム固有のユーザー体験最適化
 
-理論上では、同一のコードベースから同一の外観と動作を保証することでiOSとAndroid, macOS, Windowsといった
+![](/images/rn-xp/pic1.png)
+
+理論上では、同一のコードベースから同一の外観と動作を保証することでiOSとAndroid, macOS, Windowsといった幅広いプラットフォーム向けのアプリケーションを最小コストで作成が可能なように思えます。
+しかし、この場合に注意しなければならないのがプラットフォーム特有のユーザー体験です。上の図のように、OS毎に独自のUIデザイン思想があり同様の機能を提供していてもそのデザインやエクスペリエンスは大きく異なります。
+従って、macOSを想定して作成したUIや挙動がWindowsユーザーにとって自然ではないといったことがよく発生します。
 
 ## Windowsでの環境構築
 
