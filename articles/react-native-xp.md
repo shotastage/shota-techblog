@@ -76,6 +76,23 @@ Chakraは、もともとInternet ExplorerでJavaScriptの処理を担当して�
 しかし、この場合に注意しなければならないのがプラットフォーム特有のユーザー体験です。上の図のように、OS毎に独自のUIデザイン思想があり同様の機能を提供していてもそのデザインやエクスペリエンスは大きく異なります。
 従って、macOSを想定して作成したUIや挙動がWindowsユーザーにとって自然ではないといったことがよく発生します。
 
+## macOSでの実行環境
+
+macOSにおいての開発環境はiOSとほとんど変わりありません。必要なものはmacOSとXcodeです。また、React NativeのiOSパッケージは内部的に[Cocoapods](https://cocoapods.org/)を依存関係解決に用いているため[Homebrew](https://brew.sh/index_ja)などを利用して予めインストールする必要があります。
+既存のReact Nativeプロジェクに対して以下のコマンドを実行することでmacOS用の拡張をプロジェクトに組み込みます。
+
+
+## 実装と実験・検証
+
+この章では、React Native macOS+Windowsを
+
+### 動作環境
+
+**実装環境**
+
+![](/images/rn-xp/macos-exp-specification.png)
+
+
 ## Windowsでの環境構築
 
 Windowsで必要な環境はWindows 10もしくはWindows 11とVisual Studio環境です。
@@ -90,3 +107,10 @@ Visual StudioはCommunity版でも問題ありません。Visual Studio Codeと�
 | OS | System type	64-bit operating system, ARM-based processor |
 | CPU | M2 Max / Apple Silicon 3.20 GHz  (4 processors) |
 | RAM | 8GB (Parallels Virtual RAM) |
+
+
+## References
+
+- React Native for Windows + macOS · Build native Windows &amp; macOS apps with Javascript and React. https://microsoft.github.io/react-native-windows. Accessed: 2023-5-20.
+
+- Github - microsoft/react-native-macos. https://github.com/microsoft/react-native-macos/tree/main/React. Accessed: 2023-5-20.
