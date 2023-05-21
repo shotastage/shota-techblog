@@ -114,3 +114,6 @@ Visual StudioはCommunity版でも問題ありません。Visual Studio Codeと�
 - React Native for Windows + macOS · Build native Windows &amp; macOS apps with Javascript and React. https://microsoft.github.io/react-native-windows. Accessed: 2023-5-20.
 
 - Github - microsoft/react-native-macos. https://github.com/microsoft/react-native-macos/tree/main/React. Accessed: 2023-5-20.
+
+- Github - microsoft/react-native-windows. https://github.com/microsoft/react-native-windows. Accesed: 2023-5-20.
+
