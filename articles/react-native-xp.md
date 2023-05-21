@@ -74,19 +74,20 @@ Chakraは、もともとInternet ExplorerでJavaScriptの処理を担当して�
 
 理論上では、同一のコードベースから同一の外観と動作を保証することでiOSとAndroid, macOS, Windowsといった幅広いプラットフォーム向けのアプリケーションを最小コストで作成が可能なように思えます。
 しかし、この場合に注意しなければならないのがプラットフォーム特有のユーザー体験です。上の図のように、OS毎に独自のUIデザイン思想があり同様の機能を提供していてもそのデザインやエクスペリエンスは大きく異なります。
-従って、macOSを想定して作成したUIや挙動がWindowsユーザーにとって自然ではないといったことがよく発生します。
-
-## macOSでの実行環境
-
-macOSにおいての開発環境はiOSとほとんど変わりありません。必要なものはmacOSとXcodeです。また、React NativeのiOSパッケージは内部的に[Cocoapods](https://cocoapods.org/)を依存関係解決に用いているため[Homebrew](https://brew.sh/index_ja)などを利用して予めインストールする必要があります。
-既存のReact Nativeプロジェクに対して以下のコマンドを実行することでmacOS用の拡張をプロジェクトに組み込みます。
-
+従って、macOSを想定して作成したUIや挙動がWindowsユーザーにとって自然ではないといったことがよく発生し
 
 ## 実装と実験・検証
 
 この章では、React Native macOS+Windowsを
 
-### 動作環境
+## 動作環境
+
+ます。
+
+### macOSでの実行環境
+
+macOSにおいての開発環境はiOSとほとんど変わりありません。必要なものはmacOSとXcodeです。また、React NativeのiOSパッケージは内部的に[Cocoapods](https://cocoapods.org/)を依存関係解決に用いているため[Homebrew](https://brew.sh/index_ja)などを利用して予めインストールする必要があります。
+既存のReact Nativeプロジェクに対して以下のコマンドを実行することでmacOS用の拡張をプロジェクトに組み込みます。
 
 **実装環境**
 
