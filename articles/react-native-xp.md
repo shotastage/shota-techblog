@@ -104,7 +104,7 @@ macOSにおいての開発環境はiOSとほとんど変わりありません。
 ## Windowsでの環境構築
 
 Windowsで必要な環境はWindows 10もしくはWindows 11とVisual Studio環境です。
-Visual StudioはCommunity版でも問題ありません。Visual Studio Codeとは異なりますので
+Visual StudioはCommunity版でも問題ありません。Visual Studio Codeとは異なりますのでご注意ください。
 
 **実験環境**
 
