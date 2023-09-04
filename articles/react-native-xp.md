@@ -8,12 +8,10 @@ published: false
 
 ## 概要
 
-React Native for Windows + macOSはXXX年にMicrosoftからリリースされたReact Nativeの拡張モジュールです。本流のReact Nativeが対応するiOSとAndroidのモバイルプラットフォームに加え、macOSとWindowsのデスクトッププラットフォームもサポートしています。
+React Native for Windows + macOSは2017にMicrosoftからリリースされたReact Nativeの拡張モジュールです。本流のReact Nativeが対応するiOSとAndroidのモバイルプラットフォームに加え、macOSとWindowsのデスクトッププラットフォームもサポートしています。
 最大の成果は、クロスプラットフォーム開発をモバイル領域からデスクトップOSにまで拡大し、モバイルとデスクトップの両プラットフォーム間の垣根をなくしたことです。この成果は、モバイルアプリとデスクトップアプリの開発をより少ない予算と人員で行うことを可能にしました。
 
 React Nativeと同じく、ネイティブのUI描画機構とReact NativeのJavaScript APIをマッピングし、JSXによるUI構造定義とCSSによるスタイリングを可能にします。また、JavaScriptの動作に関しては、React Nativeと同様にJavaScriptCoreが採用されており、技術的特性はほとんど同じです。
-
-*React Native XPはReact Nativeと同様に同一のコードベースから同一外観＆同一動作をほぼ保証し*
 
 
 ## React Native XPがもたらすビジネスインパクト
