@@ -2,29 +2,34 @@
 title: "ARM系CPU向けのUbuntu Desktop環境を構築する"
 emoji: "📝"
 type: "idea" # tech: 技術記事 / idea: アイデア
-topics: []
+topics: ["Ubuntu", "ARM"]
 published: false
 ---
 
 本稿では、Ubuntu Desktopの環境をARM系CPUのハードウェアで実現するための具体的なセットアップ手順について解説します。
 
-## 背景
+# 背景
 
-多くの場合、何らかの仮想マシンでUbuntuを動作させる用途はサーバーサイドの構築であるため基本的にはCUI環境で事足りる場合が多いと思います。
+Apple SiliconやAWSのGravitonといい開発者が扱うマシンにおいて、ARMプロセッサがだいぶ市民権を獲得していきました。特に、Apple Silicon搭載のMacは開発者でも使用している人が多いと思います。
+さて、開発者にとってはLinuxの仮想環境をPCの中で動かして作業をする場合は多いと思います。多くの場合、用途はサーバーサイドの構築であるため基本的にはCUI環境で事足りる場合が多いと思います。
 とはいえ、例えばLinux向けのGUIアプリケーションをテストしたい場合などUbuntuのデスクトップ環境を構築しければならないシーンも少なからず存在します。
-しかし、[ubuntu.com](ubuntu.com)で配布されている公式のUbuntu Desktopのisoはamd64アーキテクチャであり、いわゆるIntelやAMDが採用する命令セットのCPUでしか実行ができません。
-例えばApple SiliconのMacやSnapdragonを搭載したWindowsマシンでは配布されているisoイメージを起動することが困難であると思われます。
+
+しかし、[ubuntu.com](ubuntu.com)を見ると配布されている公式のUbuntu Desktopのisoはamd64アーキテクチャであり、いわゆるIntelやAMDが採用する命令セットのCPUでしか実行ができません。
 QEMUなどの完全仮想化を使用すればx86系のOSをARM上で動かすことは一応可能ですが、CPUアーキテクチャのエミュレーションはグラフィカルな環境においてパフォーマンス上の観点から好ましくありません。
 
-Ubuntuのデスクトップ環境が求められる場合についてセットアップ手順を解説します。
-本稿では、Apple Silicon系統のMacにおいて実行を行いましたがSnapdragon CPUを搭載したWindowsマシンにおいても同様の手順を応用できるはずです。
+そこで、今回はARM版のiso配布のあるUbuntu ServerをベースにARM版UbuntuのDesktop環境を構築していきます。
 
-## 主な手法
+# 主な手法
 
 端的に述べると、Ubuntu ServerのARM64/aarch64アーキテクチャのisoからminimumの状態でインストール作業を完了させ、後にaptコマンドを使用してGNOMEデスクトップ環境のインストールを行います。
 
 
-## あとがき
+## [ubuntu.com](ubuntu.com)からServerのisoイメージをとってくる
+
+
+
+
+# あとがき
 
 Linux系のOSは古くから様々なCPUアーキテクチャに対応する傾向にありました。例えば、Ubuntuはamd64のみならずi386(32bit系x86)やPowerPC, MIPSからarm64にかけて非常に多様なCPUをサポートします。
 これは、macOSやWindowsなどの商用のOSでは対照的でこれらのOSではアーキテクチャは固定される傾向にあります。従って、開発者ツールが動かなかったり、動かすのが大変だったりとデベロッパの苦悩を生む要因になることもあります。
