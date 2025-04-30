@@ -116,8 +116,8 @@ do
             exit 0
             ;;
         sync )
-            git pull origin master
-            git push -u origin master
+            git pull origin main
+            git push -u origin main
             exit 0
             ;;
         --generate-index )
