@@ -1,7 +1,7 @@
 ---
 title: "VaporでサーバーサイドSwift入門・技術選定・理由編"
 emoji: "📝"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "技術記事" # tech: 技術記事 / idea: アイデア
 topics: ["vapor", "swift"]
 publication_name: "magicapp"
 published: false

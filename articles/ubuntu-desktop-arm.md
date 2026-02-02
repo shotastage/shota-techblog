@@ -1,7 +1,7 @@
 ---
 title: "ARM系CPU向けのUbuntu Desktop環境を構築する"
 emoji: "📝"
-type: "idea" # tech: 技術記事 / idea: アイデア
+type: "技術記事" # tech: 技術記事 / idea: アイデア
 topics: ["Ubuntu", "ARM"]
 published: true
 ---
