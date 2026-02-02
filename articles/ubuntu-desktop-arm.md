@@ -3,8 +3,10 @@ title: "ARM系CPU向けのUbuntu Desktop環境を構築する"
 emoji: "📝"
 type: "idea" # tech: 技術記事 / idea: アイデア
 topics: ["Ubuntu", "ARM"]
-published: false
+published: true
 ---
+
+>> Ubuntu 25.04から公式でARM版のデスクトップイメージが公開されました。もうちょっと前のバージョンでARMのデスクトップ版使いたい人の参考になればと思います。
 
 本稿では、Ubuntu Desktopの環境をARM系CPUのハードウェアで実現するための具体的なセットアップ手順について解説します。
 
@@ -26,8 +28,53 @@ QEMUなどの完全仮想化を使用すればx86系のOSをARM上で動かす�
 
 ## [ubuntu.com](ubuntu.com)からServerのisoイメージをとってくる
 
+![](/images/ubuntu/ubcom.png)
 
+まず、Ubuntuの公式サイト（[https://ubuntu.com/download/server](https://ubuntu.com/download/server)）にアクセスします。
+通常のダウンロードボタンを押すとamd64版がダウンロードされてしまうことがあるため、ページ内の **Alternative architecture** を探します。
 
+そこで、アーキテクチャとして **ARM64** (または ARMv8/AArch64) が選択されていることを確認してISOファイルをダウンロードしてください。
+
+## Ubuntu Serverのインストール
+
+ダウンロードしたISOファイルを使用して、仮想マシン（UTM, Parallels Desktop, VMware Fusionなど）を作成します。
+仮想マシンの設定で、CD/DVDドライブにダウンロードしたISOを指定して起動してください。
+
+インストーラーが起動したら、画面の指示に従って言語設定、キーボード設定、ネットワーク設定などを進めます。
+基本的にはデフォルト設定のままで問題ありませんが、**Install OpenSSH server** にチェックを入れておくと、トラブル時にホストマシンからSSHで接続して操作できるため便利です。
+
+インストールが完了すると、「Reboot Now」と表示されます。仮想ドライブからISOをアンマウントしてから再起動を行ってください。
+
+## デスクトップ環境 (ubuntu-desktop) の導入
+
+再起動後、コンソール（CUI）のログインプロンプトが表示されます。
+インストール時に作成したユーザーとパスワードでログインします。
+
+ログインできたら、まずはパッケージ情報を最新にします。
+
+```bash
+sudo apt update
+sudo apt upgrade -y
+```
+
+続いて、Ubuntuの標準的なデスクトップ環境である `ubuntu-desktop` パッケージをインストールします。これが本記事の肝となる手順です。
+
+```bash
+# 標準的なUbuntuデスクトップ（GNOME）をインストール
+sudo apt install ubuntu-desktop
+```
+
+このコマンドを実行すると多数のパッケージがダウンロード・インストールされるため、完了までしばらく時間がかかります。
+インストールプロセスが終了したら、システムを再起動します。
+
+```bash
+sudo reboot
+```
+
+## 動作確認
+
+再起動後、おなじみのGUIログイン画面（GDM）が表示されれば構築完了です。
+これで、ARMアーキテクチャ上でネイティブパフォーマンスを活かしたUbuntu Desktop環境が利用可能になります。
 
 # あとがき
 
